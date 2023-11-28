@@ -1,0 +1,38 @@
+{
+  "name": "template_usb_f411re",
+  "vendorId": "0xffff",
+  "productId": "0xffff",
+  "matrix": { "rows": 5, "cols": 4 },
+  "layouts": {
+    "keymap":[
+      ["0,0","0,1","0,2","0,3"],
+      ["1,0","1,1","1,2" ,{"h":2},"2,3"],
+      ["2,0","2,1","2,2"],
+      ["3,0","3,1","3,2" ,{"h":2},"4,3"],
+      [{"w":2},"4,0","4,2"]
+    ]
+  },
+  "menus": [
+    "qmk_rgb_matrix",
+    {
+      "label": "Common",
+      "content":[
+        {
+          "label": "Common",
+          "content":[
+            {
+              "label": "Restore Factory Setting",
+              "type": "toggle",
+              "content": ["id_via_clear_eeprom", 0, 1]
+            },
+            {
+              "label": "Enter Bootloader",
+              "type": "toggle",
+              "content": ["id_via_enter_bootloader", 0, 2]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
